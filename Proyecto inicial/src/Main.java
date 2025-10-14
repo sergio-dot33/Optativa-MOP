@@ -45,10 +45,18 @@ public class Main {
     //Object puedes guardar cualquier cosa
     //palabra reserva this para llamar a una clase fuera del metodo
 
+    int edadGlobal = 33;
 
-    public static void nombreMetodo(){
+    public void nombreMetodo() {
+        int edadMetodo = 12;
+        System.out.println(edadMetodo);
+        System.out.println(edadGlobal);
+    }
 
-
+    public void nombreMetodo1(int edadGlobal) {
+        int edadMetodo = 123;
+        System.out.println(edadMetodo);
+        System.out.println(this.edadGlobal);
     }
 
 }
