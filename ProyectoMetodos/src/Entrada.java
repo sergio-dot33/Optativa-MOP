@@ -10,6 +10,9 @@ public class Entrada {
         operacionesMath.sumar(9,4);
         operacionesMath.restar(5,8);
         operacionesMath.restar(5,1);
+        operacionesMath.multi(5,6);
+        System.out.println("El numero es valido " +operacionesMath.validarNumero(20));
+
 
     }
 
