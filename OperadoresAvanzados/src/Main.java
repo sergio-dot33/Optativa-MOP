@@ -4,7 +4,7 @@
 //import controller.GestorUsuarios
 //import controller.* para importar todas
 
-import controller.GestorUsuarios;
+import controller.*;
 
 public class Main {
 
@@ -12,6 +12,9 @@ public class Main {
         System.out.println("Iniciando la clase");
         GestorUsuarios gestorUsuarios = new GestorUsuarios();
         gestorUsuarios.validarUsuario("Pedro", 41, "");
+        GestorDocumentos gestorDocumentos = new GestorDocumentos();
+        gestorDocumentos.validarDocumento("documento test", 444);
+
     }
 
 

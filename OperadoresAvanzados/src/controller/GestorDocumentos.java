@@ -1,8 +1,12 @@
 package controller;
 
+import database.GestionConexion;
+
 public class GestorDocumentos {
 
     public void imprimirFactura(int cantidad){
+        GestionConexion gestionConexion = new GestionConexion();
+        gestionConexion.abrirConexio();
 
 
 
@@ -14,7 +18,6 @@ public class GestorDocumentos {
 
     }
 
-    public void enviarDocumento(String nombre, )
 
 
 }
