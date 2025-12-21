@@ -58,6 +58,20 @@ public class Main {
         System.out.println("Contiene palabra prohibida? "+controller.contienePalabrasProhibidas("hola que tal estas baby", new String[]{"baby"}));
         System.out.println(controller.primeraPalabraLarga("hola buenas tardes que tal?",4)); */
 
+        //System.out.println(controller.verificarStock(6,5));
+
+
+
+        String[] productos = {"pan","leche","huevos"};
+        int[] cantidades = {3,0,12};
+        double[] precios = {2.33,3.55,1.45};
+
+        controller.procesarPedidos(productos,cantidades,precios);
+
+
+
+
+
 
 
 

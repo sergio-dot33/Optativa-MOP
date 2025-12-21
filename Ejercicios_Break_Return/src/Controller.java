@@ -274,6 +274,61 @@ public class Controller {
 
     }
 
+    public boolean verificarStock(int cantidad, int stock){
+        if (cantidad > stock){
+            return false;
+        }
+
+
+        return true;
+
+
+    }
+
+    public double calcularDescuento(double precio, int cantidad){
+
+        double total = precio * cantidad;
+
+
+
+        if (cantidad >=2 && cantidad <=4){
+            total = total * 0.75;
+        } else if (cantidad >=5) {
+            total = total * 0.5;
+        }
+
+        return total;
+
+    }
+
+    public void procesarPedidos(String[] productos, int[] cantidades, double[] precios){
+
+        double sumaTotal = 0;
+
+        for (int i = 0; i < productos.length; i++) {
+
+            if (cantidades[i] == 0){
+                continue;
+            }
+
+            if (!verificarStock(cantidades[i],4)){
+                continue;
+            }
+
+            double totalProducto = calcularDescuento(precios[i], cantidades[i]);
+
+            sumaTotal += totalProducto;
+
+            if (sumaTotal > 1000){
+                break;
+            }
+
+        }
+
+        System.out.println(sumaTotal);
+
+    }
+
 }
 
 
